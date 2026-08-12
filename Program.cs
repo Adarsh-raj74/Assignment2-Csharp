@@ -1,14 +1,25 @@
 ﻿using System;
+using StudentLibrary;
 
-namespace AccessModifierLab
+namespace StudentClient
 {
-    class Program4
+    class Program
     {
-        static void Main4(string[] args)
+        static void Main(string[] args)
         {
-            GraduateStudent gs = new GraduateStudent();
+            Student s = new Student();
 
-            gs.ShowData();
+            // Accessible: public
+            Console.WriteLine("Name: " + s.name);
+
+            // Inaccessible: private
+            // Console.WriteLine("Age: " + s.age);
+
+            // Inaccessible: protected
+            // Console.WriteLine("Course: " + s.course);
+
+            // Inaccessible: internal
+            // Console.WriteLine("College: " + s.college);
 
             Console.ReadLine();
         }
